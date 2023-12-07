@@ -30,3 +30,10 @@ Setup instructions:
 - In the terminal, run npm start
 - Launch site at 127.0.0.1
 
+Misc Usability Features:
+
+The route lookup page makes use of loading icons while waiting for the server
+to provide bus times / route plans
+
+The review submit page uses session storage to keep track of data so it persists through a page refresh
+
