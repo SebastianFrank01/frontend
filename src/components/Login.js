@@ -22,7 +22,6 @@ function Login(props) {
 
     return (
         <div className="container">
-            {/* Get similar margins to the To Do List */}
             <div className="col-md-6 col-sm-10 mt-4 mx-auto p-0">
                 <form onSubmit={handleSubmit}>
                     <input type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder="Username" />

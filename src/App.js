@@ -47,28 +47,26 @@ class App extends React.Component {
             return <div>Loading...</div>;
         }
         return (
+
+            //Entire setup is a single column application, all other items are rendered inside the main column
+            //Items in the setup are designed to neatly stack on top of each other when put into mobile view
             <div className="bg">
                 <div className="row justify-content-center">
 
                     <div className="col-lg-6 col-sm-6 bg-dark text-light">
-
-            <Router>
-                <NavBar isAuthenticated={this.state.isAuthenticated} onLogout={this.handleLogout} />
-                <Routes>
-                    <Route path="/login" element={<Login onLoginSuccess={this.handleLoginSuccess} />} />
-                    <Route path="/" element={
-                        <ProtectedRoute isAuthenticated={this.state.isAuthenticated}>
-
-
-                                    <RatingSubmit/>
-
-
-                        </ProtectedRoute>
-                    }/>
-                    <Route path="/Lookup" element={<RouteInfo/>}/>
-                    <Route path="/ViewStats" element={<ViewStats/>}/>
-                </Routes>
-            </Router>
+                        <Router>
+                            <NavBar isAuthenticated={this.state.isAuthenticated} onLogout={this.handleLogout} />
+                            <Routes>
+                                <Route path="/login" element={<Login onLoginSuccess={this.handleLoginSuccess} />} />
+                                <Route path="/" element={
+                                    <ProtectedRoute isAuthenticated={this.state.isAuthenticated}>
+                                        <RatingSubmit/>
+                                    </ProtectedRoute>
+                                }/>
+                                <Route path="/Lookup" element={<RouteInfo/>}/>
+                                <Route path="/ViewStats" element={<ViewStats/>}/>
+                            </Routes>
+                        </Router>
                     </div>
                 </div>
             </div>

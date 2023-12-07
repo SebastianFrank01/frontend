@@ -33,8 +33,6 @@ class RouteInfo extends Component {
     }
 
 
-
-
     handleChangeStopNo(event) {
         this.setState({stopNo: event.target.value});
     }
@@ -47,6 +45,7 @@ class RouteInfo extends Component {
     }
 
     componentDidMount() {
+        //for getting info for the favourites dropdown
         getFavourites()
             .then((data) =>{
                 this.setState({favList : data});
